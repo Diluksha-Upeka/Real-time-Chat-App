@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (authUser) {
-            const newSocket = io("http://localhost:5000", {
+            const newSocket = io("https://live-talk.onrender.com/home", {
                 query: {
                     userId: authUser._id,
                 },
