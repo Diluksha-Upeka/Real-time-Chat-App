@@ -18,7 +18,7 @@ const Login = () => {
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
 				<h1 className='text-3xl font-semibold text-center text-gray-300'>
 					Login
-					<span className='text-teal-600'> ChatApp</span>
+					<span className='text-purple-600'> LIVE TALK</span>
 				</h1>
 
 				<form onSubmit={handleSubmit}>
@@ -52,7 +52,7 @@ const Login = () => {
 					</Link>
 
 					<div>
-						<button className='btn btn-block btn-sm mt-2' disabled={loading}>
+						<button className='btn btn-block btn-sm mt-2 hover:bg-purple-700 hover:text-white transition-all duration-300' disabled={loading}>
 							{loading ? <span className='loading loading-spinner '></span> : "Login"}
 						</button>
 					</div>
