@@ -9,21 +9,19 @@ const Message = ({ message }) => {
     const formattedTime = extractTime(message.createdAt);
     const chatClassName = fromMe ? "chat-end" : "chat-start";
     const profilePic = fromMe ? authUser.profilePic : selectedConversation?.profilePic;
-    const bubbleBgColor = fromMe ? "bg-purple-500" : "bg-gray-600"; // Change bubble color for better contrast
-
-    const shakeClass = message.shouldShake ? "shake" : "";
-
+    const bubbleBgColor = fromMe ? "bg-purple-500" : "bg-gray-800";
+    
     return (
-        <div className={`chat ${chatClassName} flex items-start mb-4`}>
-            <div className='chat-image avatar mr-2'>
-                <div className='w-10 rounded-full overflow-hidden shadow-lg'>
-                    <img alt='User profile' className='object-cover' src={profilePic} />
+        <div className={`chat ${chatClassName} flex items-start mb-3`}>
+            <div className="chat-image avatar">
+                <div className="w-10 h-10 rounded-full overflow-hidden shadow-md">
+                    <img alt='User profile' src={profilePic} className="object-cover" />
                 </div>
             </div>
-            <div className={`chat-bubble text-white rounded-lg shadow-md p-4 ${bubbleBgColor} ${shakeClass}`}>
+            <div className={`chat-bubble text-white ${bubbleBgColor} p-3 rounded-lg shadow-md`}>
                 {message.message}
             </div>
-            <div className='chat-footer opacity-75 text-xs ml-2'>{formattedTime}</div>
+            <div className='chat-footer opacity-50 text-xs ml-2'>{formattedTime}</div>
         </div>
     );
 };

@@ -16,16 +16,15 @@ const Messages = () => {
     }, [messages]);
 
     return (
-        <div className='flex-1 overflow-auto p-4 bg-gray-900 rounded-lg shadow-lg'>
+        <div className='px-4 flex-1 overflow-auto bg-gray-900 rounded-b-lg'>
             {loading && [...Array(3)].map((_, idx) => <MessageSkeleton key={idx} />)}
-            {!loading && messages.length > 0 ? (
-                messages.map((message) => (
-                    <div key={message._id} ref={lastMessageRef}>
-                        <Message message={message} />
-                    </div>
-                ))
-            ) : (
-                <p className='text-center text-gray-400'>Send a message to start the conversation</p>
+            {!loading && messages.length > 0 && messages.map((message) => (
+                <div key={message._id} ref={lastMessageRef}>
+                    <Message message={message} />
+                </div>
+            ))}
+            {!loading && messages.length === 0 && (
+                <p className='text-center text-gray-300 py-4'>Send a message to start the conversation</p>
             )}
         </div>
     );

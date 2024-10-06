@@ -14,17 +14,17 @@ const MessageInput = () => {
     };
 
     return (
-        <form className='px-4 my-3' onSubmit={handleSubmit}>
-            <div className='w-full relative'>
+        <form className='px-4 my-3 bg-gray-800 rounded-lg shadow-md' onSubmit={handleSubmit}>
+            <div className='flex items-center'>
                 <input
                     type='text'
-                    className='border text-sm rounded-lg block w-full p-2.5 bg-gray-800 border-gray-600 text-white placeholder-gray-400 shadow-md focus:outline-none focus:ring focus:ring-purple-500'
+                    className='border text-sm rounded-lg block w-full p-2 bg-gray-700 border-gray-600 text-white'
                     placeholder='Send a message'
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                 />
-                <button type='submit' className='absolute inset-y-0 right-0 flex items-center pr-3'>
-                    {loading ? <div className='loading loading-spinner'></div> : <BsSend className='text-purple-500 hover:text-purple-300 transition' />}
+                <button type='submit' className='ml-2 flex items-center'>
+                    {loading ? <div className='loading loading-spinner'></div> : <BsSend className='text-purple-500' />}
                 </button>
             </div>
         </form>
