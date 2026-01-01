@@ -4,6 +4,22 @@ A full-stack real-time chat application built with the MERN stack (MongoDB, Expr
 
 ![Chat Application](./project-image.jpg)
 
+---
+
+## 🎓 **Preparing for Viva Presentation?**
+
+**👉 [START HERE - Complete Viva Preparation Guide](./START_HERE.md) 👈**
+
+This repository includes comprehensive documentation to help you present this project in a viva:
+- 📚 **VIVA_PRESENTATION_GUIDE.md** - 30+ Q&A, technical deep dive
+- 🎬 **DEMO_SCRIPT.md** - Step-by-step demo walkthrough  
+- ⚡ **QUICK_REFERENCE.md** - Printable quick reference card
+- 🏗️ **ARCHITECTURE_DIAGRAMS.md** - Visual architecture diagrams
+
+**Total: 100KB of comprehensive viva preparation material!**
+
+---
+
 ## 📋 Table of Contents
 - [Features](#-features)
 - [Technology Stack](#-technology-stack)
